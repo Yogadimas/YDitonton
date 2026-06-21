@@ -1,0 +1,49 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ deploy ]
+  pull_request:
+    branches: [ deploy ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Get dependencies (Root)
+        run: flutter pub get
+
+      - name: Get dependencies (Core)
+        run: cd core && flutter pub get
+
+      - name: Get dependencies (Search)
+        run: cd search && flutter pub get
+
+      - name: Get dependencies (About)
+        run: cd about && flutter pub get
+
+      - name: Get dependencies (Movie)
+        run: cd movie && flutter pub get
+
+      - name: Get dependencies (TV)
+        run: cd tv && flutter pub get
+
+      - name: Run Tests (Core)
+        run: cd core && flutter test
+
+      - name: Run Tests (Search)
+        run: cd search && flutter test
+
+      - name: Run Tests (Movie)
+        run: cd movie && flutter test
+
+      - name: Run Tests (TV)
+        run: cd tv && flutter test

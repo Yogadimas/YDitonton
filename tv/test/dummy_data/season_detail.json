@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "air_date": "2021-01-01",
+  "episodes": [
+    {
+      "id": 1,
+      "name": "name",
+      "overview": "overview",
+      "season_number": 1,
+      "episode_number": 1,
+      "still_path": "stillPath",
+      "vote_average": 1.0,
+      "vote_count": 1,
+      "air_date": "2021-01-01"
+    }
+  ],
+  "name": "name",
+  "overview": "overview",
+  "poster_path": "posterPath",
+  "season_number": 1
+}

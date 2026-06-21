@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25839825483",
+    "project_id": "dfe-yditonton",
+    "storage_bucket": "dfe-yditonton.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25839825483:android:6cb436d7ff83d663d653ce",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN3QL3G97r4RslNw-RQUIFiMvW6MixxvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
