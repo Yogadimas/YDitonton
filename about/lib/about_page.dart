@@ -34,16 +34,7 @@ class AboutPage extends StatelessWidget {
                         textAlign: TextAlign.justify,
                       ),
                       const SizedBox(height: 32),
-                      ElevatedButton(
-                        onPressed: () {
-                          // Melempar error secara sengaja untuk mengetes Crashlytics
-                          throw Exception(
-                              "Ini adalah test crash manual dari YDitonton!");
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red),
-                        child: const Text("Test Crashlytics"),
-                      ),
+
                     ],
                   ),
                 ),

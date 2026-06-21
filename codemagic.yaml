@@ -1,7 +1,6 @@
 workflows:
   release-workflow:
     name: Yditonton CI/CD Release
-    # Kita hapus instance_type karena ternyata Codemagic HANYA menggratiskan mesin Mac mini (M1/M2) untuk akun Personal Free Tier.
     environment:
       flutter: stable
     triggering:
@@ -15,7 +14,6 @@ workflows:
     scripts:
       - name: Get All Dependencies
         script: |
-          # Install dependensi untuk root dan semua modul menggunakan subshell agar direktori tidak nyasar
           flutter pub get
           (cd core && flutter pub get)
           (cd search && flutter pub get)
@@ -25,7 +23,6 @@ workflows:
 
       - name: Run Unit Tests
         script: |
-          # Jalankan testing secara berurutan (--concurrency=1) agar database SQLite tidak bentrok (database locked/disk I/O error) antar-file test
           (cd core && flutter test --concurrency=1)
           (cd search && flutter test --concurrency=1)
           (cd movie && flutter test --concurrency=1)
@@ -33,7 +30,6 @@ workflows:
 
       - name: Build Android APK
         script: |
-          # Membangun file .apk dalam mode release
           flutter build apk --release
 
     artifacts:
