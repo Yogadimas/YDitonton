@@ -1,18 +1,17 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
 import 'package:core/styles/text_styles.dart';
 import 'package:core/utils/constants.dart';
+import 'package:core/utils/routes.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv/domain/entities/tv.dart';
+import 'package:tv/presentation/bloc/on_the_air_tvs_bloc.dart';
+import 'package:tv/presentation/bloc/popular_tvs_bloc.dart';
+import 'package:tv/presentation/bloc/top_rated_tvs_bloc.dart';
 import 'package:tv/presentation/pages/on_the_air_tvs_page.dart';
 import 'package:tv/presentation/pages/popular_tvs_page.dart';
 import 'package:tv/presentation/pages/top_rated_tvs_page.dart';
 import 'package:tv/presentation/pages/tv_detail_page.dart';
-
-import 'package:tv/presentation/bloc/on_the_air_tvs_bloc.dart';
-import 'package:tv/presentation/bloc/popular_tvs_bloc.dart';
-import 'package:tv/presentation/bloc/top_rated_tvs_bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:core/utils/routes.dart';
 
 class HomeTVPage extends StatefulWidget {
   static const routeName = '/home-tv';
@@ -157,7 +156,7 @@ class _HomeTVPageState extends State<HomeTVPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title, style: kHeading6),
+        Text(title, style: heading6),
         InkWell(
           onTap: onTap,
           child: Padding(

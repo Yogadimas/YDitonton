@@ -29,12 +29,14 @@ class MovieTable extends Equatable {
         overview: map['overview'],
       );
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'title': title,
-        'posterPath': posterPath,
-        'overview': overview,
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'posterPath': posterPath,
+      'overview': overview,
+    };
+  }
 
   Movie toEntity() => Movie.watchlist(
         id: id,

@@ -49,19 +49,21 @@ class TVDetailResponse extends Equatable {
         ),
       );
 
-  Map<String, dynamic> toJson() => {
-        "backdrop_path": backdropPath,
-        "genres": List<dynamic>.from(genres.map((x) => x.toJson())),
-        "id": id,
-        "original_name": originalName,
-        "overview": overview,
-        "poster_path": posterPath,
-        "first_air_date": firstAirDate,
-        "name": name,
-        "vote_average": voteAverage,
-        "vote_count": voteCount,
-        "seasons": List<dynamic>.from(seasons.map((x) => x.toJson())),
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      "backdrop_path": backdropPath,
+      "genres": List<dynamic>.from(genres.map((x) => x.toJson())),
+      "id": id,
+      "original_name": originalName,
+      "overview": overview,
+      "poster_path": posterPath,
+      "first_air_date": firstAirDate,
+      "name": name,
+      "vote_average": voteAverage,
+      "vote_count": voteCount,
+      "seasons": List<dynamic>.from(seasons.map((x) => x.toJson())),
+    };
+  }
 
   TVDetail toEntity() {
     return TVDetail(

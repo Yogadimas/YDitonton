@@ -32,7 +32,7 @@ class SearchTVPage extends StatelessWidget {
               textInputAction: TextInputAction.search,
             ),
             SizedBox(height: 16),
-            Text('Search Result', style: kHeading6),
+            Text('Search Result', style: heading6),
             BlocBuilder<SearchTvBloc, SearchTvState>(
               builder: (context, state) {
                 if (state is SearchTvLoading) {

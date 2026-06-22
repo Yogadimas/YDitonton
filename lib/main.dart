@@ -43,7 +43,7 @@ import 'firebase_options.dart';
 import 'injection.dart' as di;
 import 'presentation/pages/watchlist_page.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await HttpSSLPinning.init();
 
@@ -104,10 +104,10 @@ class MyApp extends StatelessWidget {
 
   ThemeData _buildTheme() {
     return ThemeData.dark().copyWith(
-      colorScheme: kColorScheme,
-      primaryColor: kRichBlack,
-      scaffoldBackgroundColor: kRichBlack,
-      textTheme: kTextTheme,
+      colorScheme: colorScheme,
+      primaryColor: richBlack,
+      scaffoldBackgroundColor: richBlack,
+      textTheme: textTheme,
     );
   }
 

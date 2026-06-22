@@ -1,7 +1,6 @@
 const aboutRoute = '/about';
 
 // Movie Routes
-const movieDetailRoute = '/detail';
 const searchRoute = '/search';
 const popularMoviesRoute = '/popular-movie';
 const topRatedRoute = '/top-rated-movie';

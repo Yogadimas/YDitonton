@@ -91,7 +91,7 @@ class DetailContent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: CircleAvatar(
-        backgroundColor: kRichBlack,
+        backgroundColor: richBlack,
         foregroundColor: Colors.white,
         child: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -109,7 +109,7 @@ class DetailContent extends StatelessWidget {
         builder: (context, scrollController) {
           return Container(
             decoration: const BoxDecoration(
-              color: kRichBlack,
+              color: richBlack,
               borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
             ),
             padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
@@ -142,18 +142,18 @@ class DetailContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(tv.name, style: kHeading5),
+        Text(tv.name, style: heading5),
         _buildWatchlistButton(context),
         Text(_showGenres(tv.genres)),
         _buildRatingRow(),
         const SizedBox(height: 16),
-        Text('Sinopsis', style: kHeading6),
+        Text('Sinopsis', style: heading6),
         Text(tv.overview),
         const SizedBox(height: 16),
-        Text('Musim', style: kHeading6),
+        Text('Musim', style: heading6),
         _buildSeasonList(),
         const SizedBox(height: 16),
-        Text('Rekomendasi', style: kHeading6),
+        Text('Rekomendasi', style: heading6),
         _buildRecommendations(),
       ],
     );
@@ -166,7 +166,7 @@ class DetailContent extends StatelessWidget {
           rating: tv.voteAverage / 2,
           itemCount: 5,
           itemBuilder: (_, index) =>
-              const Icon(Icons.star, color: kMikadoYellow),
+              const Icon(Icons.star, color: mikadoYellow),
           itemSize: 24,
         ),
         Text(tv.voteAverage.toStringAsFixed(1)),

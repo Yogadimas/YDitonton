@@ -56,7 +56,7 @@ class EpisodeDetailPage extends StatelessWidget {
                 children: [
                   Text(
                     'Episode ${episode.episodeNumber}: ${episode.name}',
-                    style: kHeading5,
+                    style: heading5,
                   ),
                   const SizedBox(height: 8),
                   Row(
@@ -65,14 +65,14 @@ class EpisodeDetailPage extends StatelessWidget {
                       const SizedBox(width: 4),
                       Text(_formatDate(episode.airDate)),
                       const SizedBox(width: 16),
-                      const Icon(Icons.star, color: kMikadoYellow, size: 16),
+                      const Icon(Icons.star, color: mikadoYellow, size: 16),
                       const SizedBox(width: 4),
                       Text(
                           '${episode.voteAverage} (${episode.voteCount} votes)'),
                     ],
                   ),
                   const SizedBox(height: 16),
-                  Text('Overview', style: kHeading6),
+                  Text('Overview', style: heading6),
                   const SizedBox(height: 8),
                   Text(
                     episode.overview.isNotEmpty
@@ -81,13 +81,13 @@ class EpisodeDetailPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   if (episode.crew.isNotEmpty) ...[
-                    Text('Crew', style: kHeading6),
+                    Text('Crew', style: heading6),
                     const SizedBox(height: 8),
                     Text(episode.crew.join(', ')),
                     const SizedBox(height: 16),
                   ],
                   if (episode.guestStars.isNotEmpty) ...[
-                    Text('Guest Stars', style: kHeading6),
+                    Text('Guest Stars', style: heading6),
                     const SizedBox(height: 8),
                     Text(episode.guestStars.join(', ')),
                     const SizedBox(height: 16),

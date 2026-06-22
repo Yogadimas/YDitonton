@@ -1,11 +1,11 @@
+import 'package:bloc_test/bloc_test.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:movie/domain/entities/movie.dart';
 import 'package:movie/presentation/bloc/top_rated_movies_bloc.dart';
 import 'package:movie/presentation/pages/top_rated_movies_page.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:bloc_test/bloc_test.dart';
-import 'package:mocktail/mocktail.dart';
 
 class MockTopRatedMoviesBloc
     extends MockBloc<TopRatedMoviesEvent, TopRatedMoviesState>

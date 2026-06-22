@@ -1,6 +1,6 @@
+import 'package:equatable/equatable.dart';
 import 'package:tv/domain/entities/tv.dart';
 import 'package:tv/domain/entities/tv_detail.dart';
-import 'package:equatable/equatable.dart';
 
 class TVTable extends Equatable {
   final int id;
@@ -29,12 +29,14 @@ class TVTable extends Equatable {
         overview: map['overview'],
       );
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'name': name,
-        'posterPath': posterPath,
-        'overview': overview,
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'posterPath': posterPath,
+      'overview': overview,
+    };
+  }
 
   TV toEntity() => TV.watchlist(
         id: id,

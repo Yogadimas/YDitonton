@@ -1,6 +1,6 @@
+import 'package:equatable/equatable.dart';
 import 'package:tv/data/models/episode_model.dart';
 import 'package:tv/domain/entities/season_detail.dart';
-import 'package:equatable/equatable.dart';
 
 class SeasonDetailModel extends Equatable {
   const SeasonDetailModel({
@@ -36,16 +36,18 @@ class SeasonDetailModel extends Equatable {
         voteAverage: json['vote_average']?.toDouble() ?? 0.0,
       );
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'air_date': airDate,
-        'episodes': List<dynamic>.from(episodes.map((x) => x.toJson())),
-        'name': name,
-        'overview': overview,
-        'poster_path': posterPath,
-        'season_number': seasonNumber,
-        'vote_average': voteAverage,
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'air_date': airDate,
+      'episodes': List<dynamic>.from(episodes.map((x) => x.toJson())),
+      'name': name,
+      'overview': overview,
+      'poster_path': posterPath,
+      'season_number': seasonNumber,
+      'vote_average': voteAverage,
+    };
+  }
 
   SeasonDetail toEntity() {
     return SeasonDetail(

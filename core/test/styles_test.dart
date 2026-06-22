@@ -6,29 +6,29 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('Should get correct color scheme properties',
       (WidgetTester tester) async {
-    expect(kColorScheme.primary, kMikadoYellow);
-    expect(kColorScheme.secondary, kPrussianBlue);
-    expect(kColorScheme.secondaryContainer, kPrussianBlue);
-    expect(kColorScheme.surface, kRichBlack);
-    expect(kColorScheme.error, Colors.red);
-    expect(kColorScheme.onPrimary, kRichBlack);
-    expect(kColorScheme.onSecondary, Colors.white);
-    expect(kColorScheme.onSurface, Colors.white);
-    expect(kColorScheme.onError, Colors.white);
-    expect(kColorScheme.brightness, Brightness.dark);
+    expect(colorScheme.primary, mikadoYellow);
+    expect(colorScheme.secondary, prussianBlue);
+    expect(colorScheme.secondaryContainer, prussianBlue);
+    expect(colorScheme.surface, richBlack);
+    expect(colorScheme.error, Colors.red);
+    expect(colorScheme.onPrimary, richBlack);
+    expect(colorScheme.onSecondary, Colors.white);
+    expect(colorScheme.onSurface, Colors.white);
+    expect(colorScheme.onError, Colors.white);
+    expect(colorScheme.brightness, Brightness.dark);
   });
 
   testWidgets('Should get correct text theme properties',
       (WidgetTester tester) async {
-    expect(kTextTheme.headlineMedium, kHeading5);
-    expect(kTextTheme.headlineSmall, kHeading6);
-    expect(kTextTheme.labelMedium, kSubtitle);
-    expect(kTextTheme.bodyMedium, kBodyText);
+    expect(textTheme.headlineMedium, heading5);
+    expect(textTheme.headlineSmall, heading6);
+    expect(textTheme.labelMedium, subtitle);
+    expect(textTheme.bodyMedium, bodyText);
   });
 
   testWidgets('Should verify davysGrey and grey', (WidgetTester tester) async {
-    expect(kDavysGrey, const Color(0xFF4B5358));
-    expect(kGrey, const Color(0xFF303030));
-    expect(kOxfordBlue, const Color(0xFF001D3D));
+    expect(davysGrey, const Color(0xFF4B5358));
+    expect(grey, const Color(0xFF303030));
+    expect(oxfordBlue, const Color(0xFF001D3D));
   });
 }

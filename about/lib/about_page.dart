@@ -15,7 +15,7 @@ class AboutPage extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  color: kPrussianBlue,
+                  color: prussianBlue,
                   child: Center(
                     child: Image.asset('assets/circle-g.png', width: 128),
                   ),
@@ -24,7 +24,7 @@ class AboutPage extends StatelessWidget {
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.all(32.0),
-                  color: kMikadoYellow,
+                  color: mikadoYellow,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -34,7 +34,6 @@ class AboutPage extends StatelessWidget {
                         textAlign: TextAlign.justify,
                       ),
                       const SizedBox(height: 32),
-
                     ],
                   ),
                 ),

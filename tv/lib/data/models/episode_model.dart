@@ -1,5 +1,5 @@
-import 'package:tv/domain/entities/episode.dart';
 import 'package:equatable/equatable.dart';
+import 'package:tv/domain/entities/episode.dart';
 
 class EpisodeModel extends Equatable {
   const EpisodeModel({
@@ -48,17 +48,19 @@ class EpisodeModel extends Equatable {
             : [],
       );
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'name': name,
-        'overview': overview,
-        'season_number': seasonNumber,
-        'episode_number': episodeNumber,
-        'still_path': stillPath,
-        'vote_average': voteAverage,
-        'vote_count': voteCount,
-        'air_date': airDate,
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'overview': overview,
+      'season_number': seasonNumber,
+      'episode_number': episodeNumber,
+      'still_path': stillPath,
+      'vote_average': voteAverage,
+      'vote_count': voteCount,
+      'air_date': airDate,
+    };
+  }
 
   Episode toEntity() {
     return Episode(

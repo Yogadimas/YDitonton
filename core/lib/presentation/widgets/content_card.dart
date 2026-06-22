@@ -3,32 +3,35 @@ import 'package:core/styles/colors.dart';
 import 'package:core/styles/text_styles.dart';
 import 'package:core/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:movie/domain/entities/movie.dart';
-import 'package:movie/presentation/pages/movie_detail_page.dart';
 
-class MovieCard extends StatelessWidget {
-  final Movie movie;
+class ContentCard extends StatelessWidget {
+  final String title;
+  final String? posterPath;
+  final String? overview;
+  final double? voteAverage;
+  final VoidCallback onTap;
 
-  const MovieCard(this.movie, {super.key});
+  const ContentCard({
+    super.key,
+    required this.title,
+    this.posterPath,
+    this.overview,
+    this.voteAverage,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8),
       child: InkWell(
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            MovieDetailPage.routeName,
-            arguments: movie.id,
-          );
-        },
+        onTap: onTap,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(16),
           child: Stack(
             children: [
               CachedNetworkImage(
-                imageUrl: '$baseImageUrl${movie.posterPath}',
+                imageUrl: '$baseImageUrl$posterPath',
                 width: double.infinity,
                 height: 180,
                 fit: BoxFit.cover,
@@ -66,7 +69,7 @@ class MovieCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      movie.title ?? '-',
+                      title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: heading6.copyWith(
@@ -77,7 +80,7 @@ class MovieCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      movie.overview ?? '-',
+                      overview ?? '-',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -89,7 +92,7 @@ class MovieCard extends StatelessWidget {
                   ],
                 ),
               ),
-              if (movie.voteAverage != null && movie.voteAverage! > 0)
+              if (voteAverage != null && voteAverage! > 0)
                 Positioned(
                   top: 16,
                   right: 16,
@@ -107,7 +110,7 @@ class MovieCard extends StatelessWidget {
                         const Icon(Icons.star, color: Colors.black87, size: 14),
                         const SizedBox(width: 4),
                         Text(
-                          movie.voteAverage!.toStringAsFixed(1),
+                          voteAverage!.toStringAsFixed(1),
                           style: const TextStyle(
                             color: Colors.black87,
                             fontWeight: FontWeight.bold,

@@ -69,7 +69,7 @@ class TVCard extends StatelessWidget {
                       tv.name ?? '-',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: kHeading6.copyWith(
+                      style: heading6.copyWith(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -99,7 +99,7 @@ class TVCard extends StatelessWidget {
                       vertical: 4,
                     ),
                     decoration: BoxDecoration(
-                      color: kMikadoYellow.withValues(alpha: 0.8),
+                      color: mikadoYellow.withValues(alpha: 0.8),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(

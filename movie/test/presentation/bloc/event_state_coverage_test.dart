@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:movie/domain/entities/movie_detail.dart';
+import 'package:movie/presentation/bloc/movie_detail_bloc.dart';
+import 'package:movie/presentation/bloc/movie_recommendations_bloc.dart';
+import 'package:movie/presentation/bloc/movie_watchlist_bloc.dart';
 import 'package:movie/presentation/bloc/now_playing_movies_bloc.dart';
 import 'package:movie/presentation/bloc/popular_movies_bloc.dart';
 import 'package:movie/presentation/bloc/top_rated_movies_bloc.dart';
 import 'package:movie/presentation/bloc/watchlist_movies_bloc.dart';
-import 'package:movie/presentation/bloc/movie_detail_bloc.dart';
-import 'package:movie/presentation/bloc/movie_recommendations_bloc.dart';
-import 'package:movie/presentation/bloc/movie_watchlist_bloc.dart';
-import 'package:movie/domain/entities/movie_detail.dart';
 
 void main() {
   test('Movie Events and States props should work', () {
